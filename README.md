@@ -1,4 +1,4 @@
-# Repeated Schmidt Levels in the Hardy Ladder
+# The Exact Two-Step Hardy Ladder Optimum for Repeated Schmidt Levels
 
 Stephanie Alexander · PDT
 

@@ -1,6 +1,6 @@
 version: v0.4
 project:
-  name: Repeated Schmidt Levels in the Hardy Ladder
+  name: The Exact Two-Step Hardy Ladder Optimum for Repeated Schmidt Levels
   description: >-
     An orthonormal terminal frame with k exceptional Schmidt amplitudes has a
     replacement on 2k coordinates preserving all positive exceptional spectra
@@ -17,7 +17,7 @@ classification:
   arxiv: [quant-ph, math.OC]
   msc2020: [81P45, 15A60]
 sources:
-  - title: Repeated Schmidt Levels in the Hardy Ladder
+  - title: The Exact Two-Step Hardy Ladder Optimum for Repeated Schmidt Levels
     authors: [Stephanie Alexander]
     type: original-proof
     relationship: other
