@@ -1,5 +1,5 @@
 {
-  "challenge_module": "Challenge",
+  "challenge_module": "HardyMultiplicity.Challenge",
   "solution_module": "Solution",
   "theorem_names": [
     "HardyCompression.frame_compression",
