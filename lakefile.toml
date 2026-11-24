@@ -1,0 +1,19 @@
+name = "hardy_multiplicity_compression"
+defaultTargets = ["Challenge", "Solution"]
+
+[[require]]
+name = "hardy_ladder_higher_dimensions"
+git = "https://github.com/stalex444/pdt-hardy-ladder-higher-dimensions.git"
+rev = "c9946d77c639d89bee866ae19a47f3f5bc0fcb7f"
+
+[[lean_lib]]
+name = "HardyCompression"
+
+[[lean_lib]]
+name = "Solution"
+
+[[lean_lib]]
+name = "Challenge"
+
+[[lean_lib]]
+name = "HardySharp"

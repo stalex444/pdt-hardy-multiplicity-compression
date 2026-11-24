@@ -1,0 +1,114 @@
+version: v0.4
+project:
+  name: Repeated Schmidt Levels in the Hardy Ladder
+  description: >-
+    An orthonormal terminal frame with k exceptional Schmidt amplitudes has a
+    replacement on 2k coordinates preserving all positive exceptional spectra
+    and all pairs of power-residual exponents simultaneously. With at least k
+    background copies the unnormalized score set stabilizes. For two exceptional
+    amplitudes this gives the attained fixed-state two-step Hardy maximum and
+    an explicit loss below the plastic ceiling for every extra background copy.
+  authors: [Stephanie Alexander]
+  responsible_maintainers: [Stephanie Alexander]
+  license: MIT
+repository:
+  role: substantive-development
+classification:
+  arxiv: [quant-ph, math.OC]
+  msc2020: [81P45, 15A60]
+sources:
+  - title: Repeated Schmidt Levels in the Hardy Ladder
+    authors: [Stephanie Alexander]
+    type: original-proof
+    relationship: other
+    location: README.md
+    note: Trace reduction, score-set stabilization, attaining frames, and the quantitative multiplicity penalty.
+  - title: Two subspaces
+    authors: [P. R. Halmos]
+    type: paper
+    relationship: background
+    author_endorsement: not-contacted
+    id: https://doi.org/10.1090/S0002-9947-1969-0251519-5
+    note: Theorem 2 gives the classical two-projection geometry behind the positive square-root frame.
+  - title: "Ladder proof of nonlocality without inequalities: theoretical and experimental results"
+    authors: [D. Boschi, S. Branca, F. De Martini, L. Hardy]
+    type: paper
+    relationship: background
+    author_endorsement: not-contacted
+    id: https://doi.org/10.1103/PhysRevLett.79.2755
+    note: Original Hardy ladder experiment and the single-pair probability in Eq. (18), specialized here to two steps.
+  - title: Ladder proof of nonlocality for two spin-half particles revisited
+    authors: [José L. Cereceda]
+    type: paper
+    relationship: background
+    author_endorsement: not-contacted
+    id: https://doi.org/10.1088/0305-4470/35/43/309
+    note: Equations (18) and (19) give the optimizing measurement angle and probability at a fixed two-qubit Schmidt ratio.
+  - title: Nonlocality without inequalities for almost all entangled states of any quantum system
+    authors: [GianCarlo Ghirardi, Luca Marinatto]
+    type: paper
+    relationship: background
+    author_endorsement: not-contacted
+    id: https://doi.org/10.1103/PhysRevA.72.014105
+    note: Constructs a Hardy witness on two unequal Schmidt amplitudes of a higher-dimensional state and evaluates its success in Eq. (26).
+  - title: "Specker’s parable of the overprotective seer: A road to contextuality, nonlocality and complementarity"
+    authors: [Yeong-Cherng Liang, Robert W. Spekkens, Howard M. Wiseman]
+    type: paper
+    relationship: background
+    author_endorsement: not-contacted
+    id: https://doi.org/10.1016/j.physrep.2011.05.001
+    note: Section IV.E reports a numerical upper bound of 0.17456 for the three-setting ladder and raises the question of two-qubit sufficiency.
+  - title: Hardy-type paradoxes for an arbitrary symmetric bipartite Bell scenario
+    authors: [Kai-Siang Chen, Shiladitya Mal, Gelo Noel M. Tabia, Yeong-Cherng Liang]
+    type: paper
+    relationship: background
+    author_endorsement: not-contacted
+    id: https://doi.org/10.1103/PhysRevA.109.042206
+    note: Table I(a), Boschi row with three binary settings per party, reports numerical lower and upper bounds of 0.17455 and 0.17459 for the state-optimized problem.
+related_formalizations:
+  - id: https://palomar-registry.org/entry.html?id=PALOMAR-2026-10-30-000005
+    relationship: builds-on
+    note: The two-qubit ladder supplies the two-step plastic-constant optimum used in the multiplicity bound through the four-level theorem.
+  - id: https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-21-000002
+    relationship: builds-on
+    note: The proof imports HardyBornBridge.gram_residual_le_matching and HardyFourPairing.matchingMax_le_plastic at commit c9946d77c639d89bee866ae19a47f3f5bc0fcb7f.
+  - id: https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-23-000030
+    relationship: other
+    note: Companion result on preparing the Hardy-optimal two-qubit spectrum with a quartic gate.
+  - id: https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-23-000034
+    relationship: other
+    note: Companion five-level result on real measurements and exact matching for spectra proportional to (s,2,3,4,5) with 0<s≤2. The present fixed-state maximum treats two exceptional amplitudes with arbitrary background multiplicity of at least two.
+status:
+  scope: Positive finite Schmidt amplitudes with a flat background. The normalized two-exception Hardy objective allows every complex terminal rank and every positive pair of amplitude ratios.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: [propext, Classical.choice, Quot.sound]
+automation:
+  methods:
+    - method: agent
+      models: [OpenAI GPT-6]
+      framework: OpenAI Codex in ChatGPT Work Mode
+      tool_setup: Pinned Lean 4 and Mathlib, comparator, Nanoda, and an independent projection and rational arithmetic replay.
+      cost: {wall_time: not tracked, spend_usd: not tracked, hardware: local machine}
+      prompting_notes: Stephanie Alexander selected a new submission on the two-step Hardy ladder.
+  spend_usd: not tracked
+  notes: AI-assisted mathematical development, formalization, documentation, and local verification.
+fidelity:
+  divergences: >-
+    The kernel statements directly use the compressed-moment terminal objective.
+    The previously established reduction from the original five-zero binary
+    experiment and rescaling to an arbitrary common background are explained
+    in the written proof. The independent numerical tests use orthogonal
+    projections. The five-distinct-amplitude pairing conjecture is outside
+    these statements.
+review:
+  status: self-assessed
+  reviewers: []
+  notes: Local verification. Hosted review and novelty assessment are separate.
+alignment:
+  namespace: HardyCompression
+  statements:
+    - {source: One lower-dimensional frame preserves all power scores and exceptional Gram data, lean: HardyCompression.frame_compression, module: Solution, status: proved}
+    - {source: Equality of complete unnormalized score sets above the multiplicity threshold, lean: HardyCompression.score_set_stabilization, module: Solution, status: proved}
+    - {source: Attained normalized optimum for two exceptional amplitudes, lean: HardyCompression.sharp_repeated_spectrum, module: Solution, status: proved}
+    - {source: Quantitative multiplicity loss relative to the plastic ceiling, lean: HardyCompression.multiplicity_penalty, module: Solution, status: proved}

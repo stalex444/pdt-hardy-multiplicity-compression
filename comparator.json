@@ -1,0 +1,16 @@
+{
+  "challenge_module": "Challenge",
+  "solution_module": "Solution",
+  "theorem_names": [
+    "HardyCompression.frame_compression",
+    "HardyCompression.score_set_stabilization",
+    "HardyCompression.sharp_repeated_spectrum",
+    "HardyCompression.multiplicity_penalty"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "enable_nanoda": true
+}
