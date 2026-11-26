@@ -1,5 +1,5 @@
 name = "hardy_multiplicity_compression"
-defaultTargets = ["HardyMultiplicity", "Solution"]
+defaultTargets = ["HardyMultiplicity"]
 
 [[require]]
 name = "hardy_ladder_higher_dimensions"
@@ -10,11 +10,8 @@ rev = "c9946d77c639d89bee866ae19a47f3f5bc0fcb7f"
 name = "HardyCompression"
 
 [[lean_lib]]
-name = "Solution"
-
-[[lean_lib]]
 name = "HardyMultiplicity"
-roots = ["HardyMultiplicity.Challenge"]
+roots = ["HardyMultiplicity.Challenge", "HardyMultiplicity.Solution"]
 
 [[lean_lib]]
 name = "HardySharp"

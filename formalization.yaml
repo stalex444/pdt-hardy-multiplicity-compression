@@ -108,7 +108,7 @@ review:
 alignment:
   namespace: HardyCompression
   statements:
-    - {source: One lower-dimensional frame preserves all power scores and exceptional Gram data, lean: HardyCompression.frame_compression, module: Solution, status: proved}
-    - {source: Equality of complete unnormalized score sets above the multiplicity threshold, lean: HardyCompression.score_set_stabilization, module: Solution, status: proved}
-    - {source: Attained normalized optimum for two exceptional amplitudes, lean: HardyCompression.sharp_repeated_spectrum, module: Solution, status: proved}
-    - {source: Quantitative multiplicity loss relative to the plastic ceiling, lean: HardyCompression.multiplicity_penalty, module: Solution, status: proved}
+    - {source: One lower-dimensional frame preserves all power scores and exceptional Gram data, lean: HardyCompression.frame_compression, module: HardyMultiplicity.Solution, status: proved}
+    - {source: Equality of complete unnormalized score sets above the multiplicity threshold, lean: HardyCompression.score_set_stabilization, module: HardyMultiplicity.Solution, status: proved}
+    - {source: Attained normalized optimum for two exceptional amplitudes, lean: HardyCompression.sharp_repeated_spectrum, module: HardyMultiplicity.Solution, status: proved}
+    - {source: Quantitative multiplicity loss relative to the plastic ceiling, lean: HardyCompression.multiplicity_penalty, module: HardyMultiplicity.Solution, status: proved}
